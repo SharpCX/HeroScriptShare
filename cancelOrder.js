@@ -2,7 +2,7 @@ const CONFIG = require("./config");
 const Web3 = require("web3");
 const Ethers = require('ethers');
 
-class Crawer {
+class Crawler {
     constructor() {
         this.web3 = new Web3(new Web3.providers.HttpProvider(CONFIG.bsc.host));
         this.wallets = {};
@@ -16,8 +16,8 @@ class Crawer {
         let address = wallet.address.toString();
         this.wallets[address] = {privateKey, wallet};
 
-        const marketabi = require("./abis/market.js");
-        this.marketContract = this.getContract("0x5CFFca0321b83dc873Bd2439aE7fEA10aE163fac", marketabi, wallet);
+        const marketAbi = require("./abis/market.js");
+        this.marketContract = this.getContract("0x5CFFca0321b83dc873Bd2439aE7fEA10aE163fac", marketAbi, wallet);
     }
 
 
@@ -76,7 +76,7 @@ class Crawer {
 
 
 async function test() {
-    let crawler = new Crawer();
+    let crawler = new Crawler();
     await crawler.start();
 }
 
