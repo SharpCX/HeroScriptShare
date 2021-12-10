@@ -22,12 +22,12 @@ class Crawler {
 
 
     async start() {
-        while (true) {
+        // while (true) {
             let curAddress = Object.keys(this.wallets)[0];
             await this.iterOneAccount(curAddress);
             await this.delay(1000)
-            console.log("looping")
-        }
+            console.log("取消一次完成，去看看成功没")
+        // }
     }
 
 
