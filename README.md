@@ -8,7 +8,11 @@
 - 去config.js文件填写自己私钥
 - 在powershell切到代码目录
 - 执行npm install
-- node cancelOrder.js
+
+- 取消挂单执行
+  - node cancelOrder.js
+- 循环提款执行
+  - node claim.js
 
 
 此脚本本人不负任何责任，由于要填写私钥风险自行承担
