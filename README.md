@@ -12,6 +12,7 @@
 - 取消挂单执行
   - node cancelOrder.js
 - 循环提款执行
+  - 这个脚本会有概率产生提币费用，账号里留0.001b就行
   - node claim.js
 
 
